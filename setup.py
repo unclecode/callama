@@ -15,7 +15,7 @@ def main():
 
     if major_version >= 8:
         print("Installing packages for newer NVIDIA GPUs (RTX 30xx, RTX 40xx, A100, H100, L40)...")
-freeze >        install(["packaging", "ninja", "einops", "flash-attn", "xformers", "trl", "peft", "accelerate", "bitsandbytes", "pydantic", "jinja2", "python-dotenv"])
+        install(["packaging", "ninja", "einops", "flash-attn", "xformers", "trl", "peft", "accelerate", "bitsandbytes", "pydantic", "jinja2", "python-dotenv"])
     else:
         print("Installing packages for older NVIDIA GPUs (V100, Tesla T4, RTX 20xx)...")
         install(["xformers", "trl", "peft", "accelerate", "bitsandbytes", "pydantic", "jinja2"])
