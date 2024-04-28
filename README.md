@@ -28,7 +28,7 @@ conda install pytorch-cuda=<12.1/11.8> pytorch cudatoolkit xformers -c pytorch -
 ```
 python setup.py
 ```
-5. Add your HuggingFace token in ".token.env", and then rename the file to ".env".
+5. Add your HuggingFace token in ".env.text", and then rename the file to ".env".
 
 6. Run the example code in the `examples` folder to see the models in action.
 
@@ -38,12 +38,12 @@ For a more interactive experience, check out the [![Open In Colab](https://colab
 
 ## Features TODO List
 
-[x] Single function detection
-[x] Support for various model sizes and quantization levels
-[x] Available as a LoRA adapter that can be merged with many models
-[ ] Multi-function detection
-[ ] Function binding, allowing the model to detect the order of execution and bind the output of one function to another
-[ ] Fine-tuning models with less than 1B parameters for efficient function calling
+- [x] Single function detection
+- [x] Support for various model sizes and quantization levels
+- [x] Available as a LoRA adapter that can be merged with many models
+- [ ] Multi-function detection
+- [ ] Function binding, allowing the model to detect the order of execution and bind the output of one function to another
+- [ ] Fine-tuning models with less than 1B parameters for efficient function calling
 
 ## Models
 
