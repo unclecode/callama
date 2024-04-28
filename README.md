@@ -1,8 +1,17 @@
 # CaLLama: Democratizing Function Calling Capabilities for Open-Source Language Models
 
+<div style = "text-align:center; background-color:#333; padding: 2em; border-radius:10px; margin:2em 0">
+<img src="https://ideogram.ai/api/images/direct/dxGJ2U9uS0-i5pMnlAYXqQ.png" alt="FLLM Repository Structure" width="400">
+</div>
+
 This repository is dedicated to advancing the "function-call" features for open-source large language models (LLMs). We believe that the future of AI, specifically AI agents, depends on proper function-calling capabilities. While proprietary models like OpenAI's have these features, it is crucial for the open-source community to have access to high-quality function-calling abilities to democratize AI.
 
 Recently, Facebook released LLaMA3, perhaps the best open-source LLM available. We have fine-tuned and created a version of LLaMA3 that natively supports function calls.
+
+## Colab
+
+1. To know how to run example check this colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qyrNeAjURfWFAwEM0ozVEfRQeHUWK4Kq?usp=sharing)
+2. For a more detailed experience, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://tinyurl.com/ucfllm)
 
 ## Usage
 
@@ -34,7 +43,7 @@ python setup.py
 
 You can also refer to the `callama.py` file in the `llms` folder to see the LLM chat template.
 
-For a more interactive experience, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://tinyurl.com/ucfllm)
+
 
 ## Features TODO List
 
