@@ -1,8 +1,6 @@
 # CaLLama: Democratizing Function Calling Capabilities for Open-Source Language Models
 
-<div style = "text-align:center; background-color:#333; padding: 2em; border-radius:10px; margin:2em 0">
-<img src="https://ideogram.ai/api/images/direct/dxGJ2U9uS0-i5pMnlAYXqQ.png" alt="FLLM Repository Structure" width="400">
-</div>
+![CaLLama](https://raw.githubusercontent.com/unclecode/callama/main/assets/callama.png)
 
 This repository is dedicated to advancing the "function-call" features for open-source large language models (LLMs). We believe that the future of AI, specifically AI agents, depends on proper function-calling capabilities. While proprietary models like OpenAI's have these features, it is crucial for the open-source community to have access to high-quality function-calling abilities to democratize AI.
 
