@@ -43,7 +43,7 @@ python setup.py
 ```
 5. Add your HuggingFace token in ".env.text", and then rename the file to ".env".
 
-6. Run the example code in the `examples` folder to see the models in action.
+6️⃣ Run the example code in the `examples` folder to see the models in action.
 
 You can also refer to the `callama.py` file in the `llms` folder to see the LLM chat template.
 
