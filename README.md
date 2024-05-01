@@ -16,7 +16,7 @@ We are focusing on two directions:
 
 1. To know how to run example check this colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qyrNeAjURfWFAwEM0ozVEfRQeHUWK4Kq?usp=sharing)
 2. For a more detailed experience, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://tinyurl.com/ucfllm)
-
+3. To use GGFU version, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EobHQ9fLkNvpWpXfegRUVDRpdd-Va5H_#scrollTo=rh3IlMxDduXw)
 ## 🛠️ Usage
 
 To use the models in this repository, follow these steps:
@@ -63,11 +63,8 @@ You can also refer to the `callama.py` file in the `llms` folder to see the LLM 
 The following models are available on Hugging Face:
 
 - 🦙 [unclecode/llama3-function-call-lora-adapter-240424](https://huggingface.co/unclecode/llama3-function-call-lora-adapter-240424)
-- 🦙 [unclecode/llama3-function-call-16bit-240424](https://huggingface.co/unclecode/llama3-function-call-16bit-240424)
-- 🦙 [unclecode/llama3-function-call-4bit-240424](https://huggingface.co/unclecode/llama3-function-call-4bit-240424)
 - 🦙 [unclecode/llama3-function-call-Q4_K_M_GGFU-240424](https://huggingface.co/unclecode/llama3-function-call-Q4_K_M_GGFU-240424)
 - 🦙 [unclecode/tinyllama-function-call-lora-adapter-250424](https://huggingface.co/unclecode/tinyllama-function-call-lora-adapter-250424)
-- 🦙 [unclecode/tinyllama-function-call-16bit-250424](https://huggingface.co/unclecode/tinyllama-function-call-16bit-250424)
 - 🦙 [unclecode/tinyllama-function-call-Q4_K_M_GGFU-250424](https://huggingface.co/unclecode/tinyllama-function-call-Q4_K_M_GGFU-250424)
 
 ## 📊 Dataset
