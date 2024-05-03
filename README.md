@@ -14,7 +14,7 @@ We are focusing on two directions:
 
 ## 🖥️ Colab
 
-1. To know how to run example check this colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qyrNeAjURfWFAwEM0ozVEfRQeHUWK4Kq?usp=sharing)
+1. To know how to run using helper class, check this colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qyrNeAjURfWFAwEM0ozVEfRQeHUWK4Kq?usp=sharing)
 2. For a more detailed experience, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://tinyurl.com/ucfllm)
 3. To use GGFU version, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EobHQ9fLkNvpWpXfegRUVDRpdd-Va5H_#scrollTo=rh3IlMxDduXw)
 ## 🛠️ Usage
