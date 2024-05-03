@@ -1,5 +1,4 @@
-# 📞🦙 CaLLama
-## Democratizing Function Calling Capabilities for Open-Source Language Models
+# 📞🦙 CaLLama: Democratizing Function Calling for Open-Source LLMs
 
 ![CaLLama](https://res.cloudinary.com/kidocode/image/upload/c_pad,w_400,h_400,ar_1:1/v1714302845/callama_3_ey59xu.png)
 
