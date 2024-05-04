@@ -8,7 +8,7 @@ from transformers import TextStreamer, TextIteratorStreamer
 from threading import Thread
 from dotenv import load_dotenv
 load_dotenv()
-
+from common.utils import render, extract_arguments
 
 class CaLLama:
     def __init__(self, model_name: str, max_seq_length: int = 4096 * 2, dtype=None, load_in_4bit: bool = True):
@@ -21,48 +21,6 @@ class CaLLama:
         self.text_streamer = None
 
         self.eos_token = '<|eot_id|>'
-        self.lama3_template = Template(
-            "{% if messages[0]['role'] == 'system' %}"\
-        "<|start_header_id|>system<|end_header_id|>\n\n"\
-        "{{ messages[0]['content'] }}\n"\
-        "{{ tools }}\n"\
-    "{% endif %}"\
-    "{% for message in messages %}"\
-        "{% if message['role'] == 'user' %}"\
-            "<|start_header_id|>user<|end_header_id|>\n\n"\
-            "{{ message['content'] }}\n"\
-        "{% elif message['role'] == 'tool' %}"\
-            "<|start_header_id|>assistant<|end_header_id|>\n\n"\
-            "<functioncall> {{ message['content'] }}<|eot_id|>\n"\
-        "{% elif message['role'] == 'tool_response' %}"\
-            "<|start_header_id|>assistant<|end_header_id|>\n\n"\
-            "{{ message['content'] }}\n"\
-        "{% elif message['role'] == 'assistant' %}"\
-            "<|start_header_id|>assistant<|end_header_id|>\n\n"\
-            "{{ message['content'] }}<|eot_id|>\n"\
-        "{% endif %}"\
-    "{% endfor %}"\
-    "{% if tool_call %}"\
-        "<|start_header_id|>assistant<|end_header_id|>\n\n<functioncall> "\
-    "{% endif %}"
-        )
-
-    def render(self, messages: List[Dict[str, str]], tools: List[Dict[str, str]], tool_call=False) -> str:
-        # Ensure there is a system message at the beginning
-        if messages[0]['role'] != 'system':
-            messages.insert(0, {'role': 'system', 'content': ''})
-
-        # Convert tools to a JSON string
-        tools_json = []
-        for tool in tools:
-            tools_json.append(json.dumps(tool, indent=4))
-
-        tools_json = '\n'.join(tools_json)
-
-        # Render the template with the provided messages, tools, and add_generation_prompt
-        rendered_string = self.lama3_template.render(messages=messages, tools=tools_json, tool_call=tool_call)
-
-        return rendered_string
 
     def get_func_call(self, text: str, prompt: str) -> str:
         return text.split(prompt)[1].split(self.eos_token)[0]
@@ -89,7 +47,7 @@ class CaLLama:
             outputs = self.model.generate(**inputs, max_new_tokens=max_tokens, pad_token_id=self.tokenizer.eos_token_id,
                                           temperature=temperature, top_p=top_p)
             response = self.tokenizer.batch_decode(outputs)
-            return self.get_func_call(response[0], prompt)
+            return extract_arguments(response[0], prompt)
 
     def _stream_tokens(self, prompt, inputs, max_tokens, temperature, top_p) -> Generator[str, None, None]:
         streamer = TextIteratorStreamer(self.tokenizer)
