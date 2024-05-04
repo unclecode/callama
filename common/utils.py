@@ -30,5 +30,5 @@ def render(messages: List[Dict[str, str]], tools: List[Dict[str, str]], tool_cal
 
     return rendered_string
 
-def extract_arguments(text: str, prompt: str) -> str:
-    return text.split(prompt)[1].split(self.eos_token)[0]
+def extract_arguments(text: str, prompt: str, eos_token='<|eot_id|>') -> str:
+    return text.split(prompt)[1].split(eos_token)[0]

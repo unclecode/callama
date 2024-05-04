@@ -47,7 +47,7 @@ class CaLLama:
             outputs = self.model.generate(**inputs, max_new_tokens=max_tokens, pad_token_id=self.tokenizer.eos_token_id,
                                           temperature=temperature, top_p=top_p)
             response = self.tokenizer.batch_decode(outputs)
-            return extract_arguments(response[0], prompt)
+            return extract_arguments(response[0], prompt, self.eos_token)
 
     def _stream_tokens(self, prompt, inputs, max_tokens, temperature, top_p) -> Generator[str, None, None]:
         streamer = TextIteratorStreamer(self.tokenizer)
