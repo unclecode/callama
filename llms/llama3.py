@@ -38,7 +38,7 @@ class CaLLama:
 
     def completion(self, messages: List[Dict[str, str]], tools: List[Dict[str, str]], stream: bool = False,
                    max_tokens: int = 256, temperature: float = 1.0, top_p: float = 1.0) -> Union[str, Generator[str, None, None]]:
-        prompt = self.render(messages, tools, tool_call=True)
+        prompt = render(messages, tools, tool_call=True)
         inputs = self.tokenizer([prompt], return_tensors="pt").to("cuda")
 
         if stream:
