@@ -1,7 +1,13 @@
-import ollama
-from common.utils import render, extract_arguments
+import ollama, os, sys
+try:
+    from common.utils import render, extract_arguments
+except ImportError:
+    # add the parent directory to the sys.path
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from common.utils import render, extract_arguments
 
-def use_with_helpwr():
+
+def use_with_helper():
     messages = [
         {
             "role": "system",
@@ -33,7 +39,7 @@ def use_with_helpwr():
 
     rendered_string = render(messages, tools, tool_call=True)
 
-    ollama = ollama.chat(
+    response = ollama.chat(
         model="unclecode/tinycallama",
         messages=[
             {
@@ -42,7 +48,7 @@ def use_with_helpwr():
             },
         ],
     )
-    print(ollama["message"]["content"])
+    print(response["message"]["content"])
 
 
 def use_with_prompt():
