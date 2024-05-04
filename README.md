@@ -12,12 +12,16 @@ We are focusing on two directions:
 1. We are developing a cool library focused on function-call to build a uniform way of working with function calls (tool calls) for all LLMs. This library will be released in its first version soon.
 2. Fine-tuning small models specifically for function calling, which has already been done for Llama 3 and Tiny Llama.
 
-## 🖥️ Colab
+
+## Usage Methods 🛠️
+
+### 🖥️ Colab
 
 1. To know how to run using helper class, check this colab [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qyrNeAjURfWFAwEM0ozVEfRQeHUWK4Kq?usp=sharing)
 2. For a more detailed experience, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://tinyurl.com/ucfllm)
 3. To use GGFU version, check out the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1EobHQ9fLkNvpWpXfegRUVDRpdd-Va5H_#scrollTo=rh3IlMxDduXw)
-## 🛠️ Usage
+
+### 🛠️ Usage Locally
 
 To use the models in this repository, follow these steps:
 
@@ -47,6 +51,21 @@ python setup.py
 
 You can also refer to the `callama.py` file in the `llms` folder to see the LLM chat template.
 
+### 🦙 Using the ollama
+
+Steps to run the example:
+
+1. Make sure Ollama is installed, and ollama server is running.
+2. Pull the model from the ollaama hub.
+
+```
+ollama pull unclecode/llama3callama
+ollama pull unclecode/tinycallama
+```
+
+References:
+- [llama3callama](https://ollama.com/unclecode/llama3callama)
+- [tinycallama](https://ollama.com/unclecode/tinycallama)
 
 
 ## ✅ Features TODO List

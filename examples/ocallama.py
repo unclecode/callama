@@ -1,3 +1,18 @@
+"""
+Steps to run the example:
+1. Make sure Ollama is installed, and ollama server is running.
+2. Pull the model from the ollaama hub.
+```
+ollama pull unclecode/llama3callama
+ollama pull unclecode/tinycallama
+```
+
+References:
+- [llama3callama](https://ollama.com/unclecode/llama3callama)
+- [tinycallama](https://ollama.com/unclecode/tinycallama)
+"""
+
+
 import ollama, os, sys
 try:
     from common.utils import render, extract_arguments
