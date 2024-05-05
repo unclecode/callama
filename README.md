@@ -1,6 +1,6 @@
-# 📞🦙 CaLLama: Democratizing Function Calling for Open-Source LLMs
+# 📞🦙 CaLLama: Hola "Function" are you there?
 
-![CaLLama](https://res.cloudinary.com/kidocode/image/upload/c_pad,w_400,h_400,ar_1:1/v1714302845/callama_3_ey59xu.png)
+![CaLLama](https://res.cloudinary.com/kidocode/image/upload/c_pad,w_300,h_300,ar_1:1/v1714302845/callama_3_ey59xu.png)
 
 This repository is dedicated to advancing the "function-call" features for open-source large language models (LLMs). We believe that the future of AI, specifically AI agents, depends on proper function-calling capabilities. While proprietary models like OpenAI's have these features, it is crucial for the open-source community to have access to high-quality function-calling abilities to democratize AI.
 
@@ -14,6 +14,9 @@ We are focusing on two directions:
 
 
 ## Usage Methods 🛠️
+
+[![Model in HuggingFace](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-md.svg)](https://huggingface.co/unclecode)
+
 
 ### 🖥️ Colab
 
@@ -47,7 +50,7 @@ python setup.py
 ```
 5. Add your HuggingFace token in ".env.text", and then rename the file to ".env".
 
-6️⃣ Run the example code in the `examples` folder to see the models in action.
+6. Run the example code in the `examples` folder to see the models in action.
 
 You can also refer to the `callama.py` file in the `llms` folder to see the LLM chat template.
 
@@ -63,7 +66,10 @@ ollama pull unclecode/llama3callama
 ollama pull unclecode/tinycallama
 ```
 
-References:
+3. Make sure to check the ollama example [here](https://github.com/unclecode/callama/blob/main/examples/ocallama.py)
+
+
+Link to models:
 - [llama3callama](https://ollama.com/unclecode/llama3callama)
 - [tinycallama](https://ollama.com/unclecode/tinycallama)
 
